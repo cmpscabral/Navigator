@@ -1,0 +1,1759 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project version="2.0.0a2" title="">
+  <file path="Treffynnon/Navigator.php" hash="0c92c06e193c0e5a168ddd0dd46994fe" package="Default">
+    <parse_markers>
+      <error line="1" code="50007">No page-level DocBlock was found in file Treffynnon/Navigator.php</error>
+    </parse_markers>
+    <namespace-alias name="C">Treffynnon\Navigator\Coordinate</namespace-alias>
+    <namespace-alias name="L">Treffynnon\Navigator\LatLong</namespace-alias>
+    <namespace-alias name="D">Treffynnon\Navigator\Distance</namespace-alias>
+    <class final="false" abstract="false" namespace="Treffynnon" line="20" package="Default">
+      <name>Navigator</name>
+      <full_name>\Treffynnon\Navigator</full_name>
+      <extends/>
+      <docblock line="17">
+        <description><![CDATA[Base manager class for setting up navigator calculations]]></description>
+        <long-description><![CDATA[]]></long-description>
+      </docblock>
+      <constant namespace="Treffynnon" line="26" package="Default">
+        <name>Lat</name>
+        <value><![CDATA['Lat']]></value>
+        <docblock line="21">
+          <description><![CDATA[Used to define a coordinate as a latitude]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="21" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </constant>
+      <constant namespace="Treffynnon" line="31" package="Default">
+        <name>Long</name>
+        <value><![CDATA['Long']]></value>
+        <docblock line="27">
+          <description><![CDATA[Used to define a coordinate as a longitude]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="27" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </constant>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Treffynnon" line="36" package="">
+        <name>autoloader</name>
+        <type>function</type>
+        <docblock line="33">
+          <description><![CDATA[Setup the autoloader to load the Treffynnon\Navigator library]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="private" namespace="Treffynnon" line="44" package="">
+        <name>_autoloader</name>
+        <type>function</type>
+        <docblock line="40">
+          <description><![CDATA[Convert class names into file paths for inclusion]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="40" name="param" description="" type="string" variable="$class_name">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="44">
+          <name>$class_name</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Treffynnon" line="57" package="">
+        <name>distanceFactory</name>
+        <type>function</type>
+        <docblock line="49">
+          <description><![CDATA[Get a primed instance of the distance object]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="49" name="param" description="" type="string|float" variable="$lat1">
+            <type by_reference="false">string</type>
+            <type by_reference="false">float</type>
+          </tag>
+          <tag line="49" name="param" description="" type="string|float" variable="$long1">
+            <type by_reference="false">string</type>
+            <type by_reference="false">float</type>
+          </tag>
+          <tag line="49" name="param" description="" type="string|float" variable="$lat2">
+            <type by_reference="false">string</type>
+            <type by_reference="false">float</type>
+          </tag>
+          <tag line="49" name="param" description="" type="string|float" variable="$long2">
+            <type by_reference="false">string</type>
+            <type by_reference="false">float</type>
+          </tag>
+          <tag line="49" name="return" description="" type="\Treffynnon\Navigator\Distance">
+            <type by_reference="false">\Treffynnon\Navigator\Distance</type>
+          </tag>
+        </docblock>
+        <argument line="57">
+          <name>$lat1</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="57">
+          <name>$long1</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="57">
+          <name>$lat2</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="57">
+          <name>$long2</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="Treffynnon" line="71" package="">
+        <name>getDistance</name>
+        <type>function</type>
+        <docblock line="63">
+          <description><![CDATA[Get the distance in metres]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="63" name="param" description="" type="string|float" variable="$lat1">
+            <type by_reference="false">string</type>
+            <type by_reference="false">float</type>
+          </tag>
+          <tag line="63" name="param" description="" type="string|float" variable="$long1">
+            <type by_reference="false">string</type>
+            <type by_reference="false">float</type>
+          </tag>
+          <tag line="63" name="param" description="" type="string|float" variable="$lat2">
+            <type by_reference="false">string</type>
+            <type by_reference="false">float</type>
+          </tag>
+          <tag line="63" name="param" description="" type="string|float" variable="$long2">
+            <type by_reference="false">string</type>
+            <type by_reference="false">float</type>
+          </tag>
+          <tag line="63" name="return" description="" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+        <argument line="71">
+          <name>$lat1</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="71">
+          <name>$long1</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="71">
+          <name>$lat2</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+        <argument line="71">
+          <name>$long2</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="Treffynnon/Navigator/Distance.php" hash="9061ef428ef748381213017b91dfe6ff" package="Default">
+    <parse_markers>
+      <error line="40" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $calculator in get()</error>
+      <error line="40" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $unit_converter in get()</error>
+      <error line="15" code="50000">No DocBlock was found for Distance</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file Treffynnon/Navigator/Distance.php</error>
+    </parse_markers>
+    <namespace-alias name="D">Treffynnon\Navigator\Distance</namespace-alias>
+    <class final="false" abstract="false" namespace="Treffynnon\Navigator" line="15" package="Default">
+      <name>Distance</name>
+      <full_name>\Treffynnon\Navigator\Distance</full_name>
+      <extends/>
+      <property final="false" static="false" visibility="protected" line="21" package="Default">
+        <name>$point1</name>
+        <default><![CDATA[null]]></default>
+        <docblock line="17">
+          <description><![CDATA[The first coordinate]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="17" name="var" description="" type="\N\LatLong">
+            <type by_reference="false">\N\LatLong</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="27" package="Default">
+        <name>$point2</name>
+        <default><![CDATA[null]]></default>
+        <docblock line="23">
+          <description><![CDATA[The second coordinate]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="23" name="var" description="" type="\N\LatLong">
+            <type by_reference="false">\N\LatLong</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Treffynnon\Navigator" line="35" package="">
+        <name>__construct</name>
+        <type>function</type>
+        <docblock line="29">
+          <description><![CDATA[Instantiate the distance object and supply the two coordinates to
+calculate the distance between them]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="29" name="param" description="" type="\Treffynnon\Navigator\LatLong" variable="$point1">
+            <type by_reference="false">\Treffynnon\Navigator\LatLong</type>
+          </tag>
+          <tag line="29" name="param" description="" type="\Treffynnon\Navigator\LatLong" variable="$point2">
+            <type by_reference="false">\Treffynnon\Navigator\LatLong</type>
+          </tag>
+        </docblock>
+        <argument line="35">
+          <name>$point1</name>
+          <default><![CDATA[]]></default>
+          <type>LatLong</type>
+        </argument>
+        <argument line="35">
+          <name>$point2</name>
+          <default><![CDATA[]]></default>
+          <type>LatLong</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Treffynnon\Navigator" line="48" package="">
+        <name>get</name>
+        <type>function</type>
+        <docblock line="40">
+          <description><![CDATA[Calculate the distance between two points. Defaults to Vincenty if
+no calculator is supplied. If no unit converter is supplied then the
+formula will return a value in metres.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="40" name="param" description="" type="\Treffynnon\Navigator\Distance\Calculator\CalculatorInterface" variable="$calculator">
+            <type by_reference="false">\Treffynnon\Navigator\Distance\Calculator\CalculatorInterface</type>
+          </tag>
+          <tag line="40" name="param" description="" type="\Treffynnon\Navigator\Distance\Calculator\ConverterAbstract" variable="$unit_converter">
+            <type by_reference="false">\Treffynnon\Navigator\Distance\Calculator\ConverterAbstract</type>
+          </tag>
+          <tag line="40" name="return" description="" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+        <argument line="48">
+          <name>$calculator</name>
+          <default><![CDATA[null]]></default>
+          <type>CalculatorAbstract</type>
+        </argument>
+        <argument line="48">
+          <name>$unit_converter</name>
+          <default><![CDATA[null]]></default>
+          <type>ConverterAbstract</type>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="Treffynnon/Navigator/Coordinate.php" hash="824ec0d71b04b09ef988d4310e342f44" package="Default">
+    <parse_markers>
+      <error line="33" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $parser in __construct()</error>
+      <error line="88" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $parser in setParser()</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file Treffynnon/Navigator/Coordinate.php</error>
+    </parse_markers>
+    <namespace-alias name="C">Treffynnon\Navigator\Coordinate</namespace-alias>
+    <class final="false" abstract="false" namespace="Treffynnon\Navigator" line="18" package="Default">
+      <name>Coordinate</name>
+      <full_name>\Treffynnon\Navigator\Coordinate</full_name>
+      <extends/>
+      <docblock line="15">
+        <description><![CDATA[To manage a coordinate in radians with the supplied parser object]]></description>
+        <long-description><![CDATA[]]></long-description>
+      </docblock>
+      <property final="false" static="false" visibility="protected" line="24" package="Default">
+        <name>$coordinate</name>
+        <default><![CDATA[null]]></default>
+        <docblock line="20">
+          <description><![CDATA[The radian value of the supplied coordinate]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="20" name="var" description="" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="31" package="Default">
+        <name>$parser</name>
+        <default><![CDATA[null]]></default>
+        <docblock line="26">
+          <description><![CDATA[Parser object to use when converting a value to radians and
+back again]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="26" name="var" description="" type="\Treffynnon\Navigator\ParserInterface">
+            <type by_reference="false">\Treffynnon\Navigator\ParserInterface</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Treffynnon\Navigator" line="38" package="">
+        <name>__construct</name>
+        <type>function</type>
+        <docblock line="33">
+          <description><![CDATA[Setup a new coordinate]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="33" name="param" description="" type="string|float" variable="$coord">
+            <type by_reference="false">string</type>
+            <type by_reference="false">float</type>
+          </tag>
+          <tag line="33" name="param" description="" type="\Treffynnon\Navigator\ParserInterface" variable="$parser">
+            <type by_reference="false">\Treffynnon\Navigator\ParserInterface</type>
+          </tag>
+        </docblock>
+        <argument line="38">
+          <name>$coord</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+        <argument line="38">
+          <name>$parser</name>
+          <default><![CDATA[null]]></default>
+          <type>ParserAbstract</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Treffynnon\Navigator" line="55" package="">
+        <name>guessParser</name>
+        <type>function</type>
+        <docblock line="50">
+          <description><![CDATA[Guess the correct parser for a given coordinate]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="50" name="param" description="" type="float|string" variable="$coord">
+            <type by_reference="false">float</type>
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="50" name="return" description="" type="\Treffynnon\Navigator\Coordinate\DecimalParser|\Treffynnon\Navigator\Coordinate\DmsParser">
+            <type by_reference="false">\Treffynnon\Navigator\Coordinate\DecimalParser</type>
+            <type by_reference="false">\Treffynnon\Navigator\Coordinate\DmsParser</type>
+          </tag>
+        </docblock>
+        <argument line="55">
+          <name>$coord</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Treffynnon\Navigator" line="66" package="">
+        <name>set</name>
+        <type>function</type>
+        <docblock line="62">
+          <description><![CDATA[Sets the coordinate using the parser to a radian value]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="62" name="param" description="" type="float" variable="$coord">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+        <argument line="66">
+          <name>$coord</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Treffynnon\Navigator" line="74" package="">
+        <name>get</name>
+        <type>function</type>
+        <docblock line="70">
+          <description><![CDATA[Get a coordinates radian value]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="70" name="return" description="" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Treffynnon\Navigator" line="84" package="">
+        <name>__toString</name>
+        <type>function</type>
+        <docblock line="78">
+          <description><![CDATA[Used when a coordinate value is used as a string. This uses the parser
+to output a human readable format converted from the radian value held in
+$this->coordinate]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="78" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Treffynnon\Navigator" line="92" package="">
+        <name>setParser</name>
+        <type>function</type>
+        <docblock line="88">
+          <description><![CDATA[Set the parser that should be used to manage this coordinate]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="88" name="param" description="" type="\Treffynnon\Navigator\ParserInterface" variable="$parser">
+            <type by_reference="false">\Treffynnon\Navigator\ParserInterface</type>
+          </tag>
+        </docblock>
+        <argument line="92">
+          <name>$parser</name>
+          <default><![CDATA[]]></default>
+          <type>ParserAbstract</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Treffynnon\Navigator" line="100" package="">
+        <name>getParser</name>
+        <type>function</type>
+        <docblock line="96">
+          <description><![CDATA[Get the parser that is currently in use for this coordinate]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="96" name="return" description="" type="\Treffynnon\Navigator\ParserInterface">
+            <type by_reference="false">\Treffynnon\Navigator\ParserInterface</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+  </file>
+  <file path="Treffynnon/Navigator/Distance/Converter/MetreToLeague.php" hash="f4b6f2a40394d431ebe1384c290b70aa" package="Default">
+    <parse_markers>
+      <error line="18" code="50018">No DocBlock was found for property $factor</error>
+      <notice line="29" code="50017">The type for the @param tag in reverse() is "type"; isn't this an IDE default?</notice>
+      <notice line="29" code="50017">The type for the @return tag in reverse() is "type"; isn't this an IDE default?</notice>
+      <error line="1" code="50007">No page-level DocBlock was found in file Treffynnon/Navigator/Distance/Converter/MetreToLeague.php</error>
+    </parse_markers>
+    <class final="false" abstract="false" namespace="Treffynnon\Navigator\Distance\Converter" line="16" package="Default">
+      <name>MetreToLeague</name>
+      <full_name>\Treffynnon\Navigator\Distance\Converter\MetreToLeague</full_name>
+      <extends>\Treffynnon\Navigator\Distance\Converter\ConverterAbstract</extends>
+      <docblock line="13">
+        <description><![CDATA[Convert a value in metres to leagues]]></description>
+        <long-description><![CDATA[]]></long-description>
+      </docblock>
+      <property final="false" static="false" visibility="public" line="18" package="Default">
+        <name>$factor</name>
+        <default><![CDATA[0.000179985601]]></default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Treffynnon\Navigator\Distance\Converter" line="25" package="">
+        <name>convert</name>
+        <type>function</type>
+        <docblock line="20">
+          <description><![CDATA[Convert the supplied metres to leagues]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="20" name="param" description="in metres" type="float" variable="$distance">
+            <type by_reference="false">float</type>
+          </tag>
+          <tag line="20" name="return" description="" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+        <argument line="25">
+          <name>$distance</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Treffynnon\Navigator\Distance\Converter" line="34" package="">
+        <name>reverse</name>
+        <type>function</type>
+        <docblock line="29">
+          <description><![CDATA[Convert the supplied value in leagues to metres]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="29" name="param" description="in leagues" type="\Treffynnon\Navigator\Distance\Converter\type" variable="$distance">
+            <type by_reference="false">\Treffynnon\Navigator\Distance\Converter\type</type>
+          </tag>
+          <tag line="29" name="return" description="" type="\Treffynnon\Navigator\Distance\Converter\type">
+            <type by_reference="false">\Treffynnon\Navigator\Distance\Converter\type</type>
+          </tag>
+        </docblock>
+        <argument line="34">
+          <name>$distance</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="Treffynnon/Navigator/Distance/Converter/MetreToParsec.php" hash="09860447b9be2bea5f3cd2388cc4bff3" package="Default">
+    <parse_markers>
+      <error line="18" code="50018">No DocBlock was found for property $factor</error>
+      <notice line="29" code="50017">The type for the @param tag in reverse() is "type"; isn't this an IDE default?</notice>
+      <notice line="29" code="50017">The type for the @return tag in reverse() is "type"; isn't this an IDE default?</notice>
+      <error line="1" code="50007">No page-level DocBlock was found in file Treffynnon/Navigator/Distance/Converter/MetreToParsec.php</error>
+    </parse_markers>
+    <class final="false" abstract="false" namespace="Treffynnon\Navigator\Distance\Converter" line="16" package="Default">
+      <name>MetreToParsec</name>
+      <full_name>\Treffynnon\Navigator\Distance\Converter\MetreToParsec</full_name>
+      <extends>\Treffynnon\Navigator\Distance\Converter\ConverterAbstract</extends>
+      <docblock line="13">
+        <description><![CDATA[Convert a value in metres to parsecs]]></description>
+        <long-description><![CDATA[]]></long-description>
+      </docblock>
+      <property final="false" static="false" visibility="public" line="18" package="Default">
+        <name>$factor</name>
+        <default><![CDATA[3.24077927001E-17]]></default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Treffynnon\Navigator\Distance\Converter" line="25" package="">
+        <name>convert</name>
+        <type>function</type>
+        <docblock line="20">
+          <description><![CDATA[Convert the supplied metres to furlongs]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="20" name="param" description="in metres" type="float" variable="$distance">
+            <type by_reference="false">float</type>
+          </tag>
+          <tag line="20" name="return" description="" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+        <argument line="25">
+          <name>$distance</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Treffynnon\Navigator\Distance\Converter" line="34" package="">
+        <name>reverse</name>
+        <type>function</type>
+        <docblock line="29">
+          <description><![CDATA[Convert the supplied value in leagues to metres]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="29" name="param" description="in leagues" type="\Treffynnon\Navigator\Distance\Converter\type" variable="$distance">
+            <type by_reference="false">\Treffynnon\Navigator\Distance\Converter\type</type>
+          </tag>
+          <tag line="29" name="return" description="" type="\Treffynnon\Navigator\Distance\Converter\type">
+            <type by_reference="false">\Treffynnon\Navigator\Distance\Converter\type</type>
+          </tag>
+        </docblock>
+        <argument line="34">
+          <name>$distance</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="Treffynnon/Navigator/Distance/Converter/MetreToMile.php" hash="c6dbfa08634e1c00cf5fba80175f3a96" package="Default">
+    <parse_markers>
+      <error line="18" code="50018">No DocBlock was found for property $factor</error>
+      <notice line="29" code="50017">The type for the @param tag in reverse() is "type"; isn't this an IDE default?</notice>
+      <notice line="29" code="50017">The type for the @return tag in reverse() is "type"; isn't this an IDE default?</notice>
+      <error line="1" code="50007">No page-level DocBlock was found in file Treffynnon/Navigator/Distance/Converter/MetreToMile.php</error>
+    </parse_markers>
+    <class final="false" abstract="false" namespace="Treffynnon\Navigator\Distance\Converter" line="16" package="Default">
+      <name>MetreToMile</name>
+      <full_name>\Treffynnon\Navigator\Distance\Converter\MetreToMile</full_name>
+      <extends>\Treffynnon\Navigator\Distance\Converter\ConverterAbstract</extends>
+      <docblock line="13">
+        <description><![CDATA[Convert a value in metres to miles]]></description>
+        <long-description><![CDATA[]]></long-description>
+      </docblock>
+      <property final="false" static="false" visibility="public" line="18" package="Default">
+        <name>$factor</name>
+        <default><![CDATA[0.000621371192]]></default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Treffynnon\Navigator\Distance\Converter" line="25" package="">
+        <name>convert</name>
+        <type>function</type>
+        <docblock line="20">
+          <description><![CDATA[Convert the supplied metres to miles]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="20" name="param" description="in metres" type="float" variable="$distance">
+            <type by_reference="false">float</type>
+          </tag>
+          <tag line="20" name="return" description="" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+        <argument line="25">
+          <name>$distance</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Treffynnon\Navigator\Distance\Converter" line="34" package="">
+        <name>reverse</name>
+        <type>function</type>
+        <docblock line="29">
+          <description><![CDATA[Convert the supplied value in miles to metres]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="29" name="param" description="in miles" type="\Treffynnon\Navigator\Distance\Converter\type" variable="$distance">
+            <type by_reference="false">\Treffynnon\Navigator\Distance\Converter\type</type>
+          </tag>
+          <tag line="29" name="return" description="" type="\Treffynnon\Navigator\Distance\Converter\type">
+            <type by_reference="false">\Treffynnon\Navigator\Distance\Converter\type</type>
+          </tag>
+        </docblock>
+        <argument line="34">
+          <name>$distance</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="Treffynnon/Navigator/Distance/Converter/MetreToKilometre.php" hash="63cb1d832224ece9b8e7e3e6a4a10fcd" package="Default">
+    <parse_markers>
+      <error line="18" code="50018">No DocBlock was found for property $factor</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file Treffynnon/Navigator/Distance/Converter/MetreToKilometre.php</error>
+    </parse_markers>
+    <class final="false" abstract="false" namespace="Treffynnon\Navigator\Distance\Converter" line="16" package="Default">
+      <name>MetreToKilometre</name>
+      <full_name>\Treffynnon\Navigator\Distance\Converter\MetreToKilometre</full_name>
+      <extends>\Treffynnon\Navigator\Distance\Converter\ConverterAbstract</extends>
+      <docblock line="13">
+        <description><![CDATA[Convert a value in metres to kilometres]]></description>
+        <long-description><![CDATA[]]></long-description>
+      </docblock>
+      <property final="false" static="false" visibility="public" line="18" package="Default">
+        <name>$factor</name>
+        <default><![CDATA[1000]]></default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Treffynnon\Navigator\Distance\Converter" line="25" package="">
+        <name>convert</name>
+        <type>function</type>
+        <docblock line="20">
+          <description><![CDATA[Convert the supplied metres to kilometres]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="20" name="param" description="in metres" type="float" variable="$distance">
+            <type by_reference="false">float</type>
+          </tag>
+          <tag line="20" name="return" description="" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+        <argument line="25">
+          <name>$distance</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Treffynnon\Navigator\Distance\Converter" line="34" package="">
+        <name>reverse</name>
+        <type>function</type>
+        <docblock line="29">
+          <description><![CDATA[Convert the supplied kilometres into metres]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="29" name="param" description="in kilometres" type="float" variable="$distance">
+            <type by_reference="false">float</type>
+          </tag>
+          <tag line="29" name="return" description="" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+        <argument line="34">
+          <name>$distance</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="Treffynnon/Navigator/Distance/Converter/MetreToFurlong.php" hash="86a59d22d4b4e976008b7a8fbbc1bbf5" package="Default">
+    <parse_markers>
+      <error line="18" code="50018">No DocBlock was found for property $factor</error>
+      <notice line="29" code="50017">The type for the @param tag in reverse() is "type"; isn't this an IDE default?</notice>
+      <notice line="29" code="50017">The type for the @return tag in reverse() is "type"; isn't this an IDE default?</notice>
+      <error line="1" code="50007">No page-level DocBlock was found in file Treffynnon/Navigator/Distance/Converter/MetreToFurlong.php</error>
+    </parse_markers>
+    <class final="false" abstract="false" namespace="Treffynnon\Navigator\Distance\Converter" line="16" package="Default">
+      <name>MetreToFurlong</name>
+      <full_name>\Treffynnon\Navigator\Distance\Converter\MetreToFurlong</full_name>
+      <extends>\Treffynnon\Navigator\Distance\Converter\ConverterAbstract</extends>
+      <docblock line="13">
+        <description><![CDATA[Convert a value in metres to furlongs]]></description>
+        <long-description><![CDATA[]]></long-description>
+      </docblock>
+      <property final="false" static="false" visibility="public" line="18" package="Default">
+        <name>$factor</name>
+        <default><![CDATA[0.00497096954]]></default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Treffynnon\Navigator\Distance\Converter" line="25" package="">
+        <name>convert</name>
+        <type>function</type>
+        <docblock line="20">
+          <description><![CDATA[Convert the supplied metres to furlongs]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="20" name="param" description="in metres" type="float" variable="$distance">
+            <type by_reference="false">float</type>
+          </tag>
+          <tag line="20" name="return" description="" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+        <argument line="25">
+          <name>$distance</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Treffynnon\Navigator\Distance\Converter" line="34" package="">
+        <name>reverse</name>
+        <type>function</type>
+        <docblock line="29">
+          <description><![CDATA[Convert the supplied value in leagues to metres]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="29" name="param" description="in leagues" type="\Treffynnon\Navigator\Distance\Converter\type" variable="$distance">
+            <type by_reference="false">\Treffynnon\Navigator\Distance\Converter\type</type>
+          </tag>
+          <tag line="29" name="return" description="" type="\Treffynnon\Navigator\Distance\Converter\type">
+            <type by_reference="false">\Treffynnon\Navigator\Distance\Converter\type</type>
+          </tag>
+        </docblock>
+        <argument line="34">
+          <name>$distance</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="Treffynnon/Navigator/Distance/Converter/MetreToNauticalMile.php" hash="219917fbbd31eba451323ac6b5c2b9b6" package="Default">
+    <parse_markers>
+      <error line="18" code="50018">No DocBlock was found for property $factor</error>
+      <notice line="29" code="50017">The type for the @param tag in reverse() is "type"; isn't this an IDE default?</notice>
+      <notice line="29" code="50017">The type for the @return tag in reverse() is "type"; isn't this an IDE default?</notice>
+      <error line="1" code="50007">No page-level DocBlock was found in file Treffynnon/Navigator/Distance/Converter/MetreToNauticalMile.php</error>
+    </parse_markers>
+    <class final="false" abstract="false" namespace="Treffynnon\Navigator\Distance\Converter" line="16" package="Default">
+      <name>MetreToNauticalMile</name>
+      <full_name>\Treffynnon\Navigator\Distance\Converter\MetreToNauticalMile</full_name>
+      <extends>\Treffynnon\Navigator\Distance\Converter\ConverterAbstract</extends>
+      <docblock line="13">
+        <description><![CDATA[Convert a value in metres to nautical miles]]></description>
+        <long-description><![CDATA[]]></long-description>
+      </docblock>
+      <property final="false" static="false" visibility="public" line="18" package="Default">
+        <name>$factor</name>
+        <default><![CDATA[1852]]></default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Treffynnon\Navigator\Distance\Converter" line="25" package="">
+        <name>convert</name>
+        <type>function</type>
+        <docblock line="20">
+          <description><![CDATA[Convert the supplied metres to nautical miles]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="20" name="param" description="in metres" type="float" variable="$distance">
+            <type by_reference="false">float</type>
+          </tag>
+          <tag line="20" name="return" description="" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+        <argument line="25">
+          <name>$distance</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Treffynnon\Navigator\Distance\Converter" line="34" package="">
+        <name>reverse</name>
+        <type>function</type>
+        <docblock line="29">
+          <description><![CDATA[Convert the supplied value in nautical miles to metres]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="29" name="param" description="in nautical miles" type="\Treffynnon\Navigator\Distance\Converter\type" variable="$distance">
+            <type by_reference="false">\Treffynnon\Navigator\Distance\Converter\type</type>
+          </tag>
+          <tag line="29" name="return" description="" type="\Treffynnon\Navigator\Distance\Converter\type">
+            <type by_reference="false">\Treffynnon\Navigator\Distance\Converter\type</type>
+          </tag>
+        </docblock>
+        <argument line="34">
+          <name>$distance</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="Treffynnon/Navigator/Distance/Converter/ConverterAbstract.php" hash="e228667d9a7bf6f91c28edf75a0b1aeb" package="Default">
+    <parse_markers>
+      <error line="19" code="50012">No short description for method convert()</error>
+      <notice line="19" code="50013">Parameter  could not be found in convert()</notice>
+      <error line="25" code="50012">No short description for method reverse()</error>
+      <notice line="25" code="50013">Parameter  could not be found in reverse()</notice>
+      <error line="1" code="50007">No page-level DocBlock was found in file Treffynnon/Navigator/Distance/Converter/ConverterAbstract.php</error>
+    </parse_markers>
+    <class final="false" abstract="true" namespace="Treffynnon\Navigator\Distance\Converter" line="17" package="Default">
+      <name>ConverterAbstract</name>
+      <full_name>\Treffynnon\Navigator\Distance\Converter\ConverterAbstract</full_name>
+      <extends/>
+      <docblock line="13">
+        <description><![CDATA[A couple of alias functions for a shorter syntax when using the
+converter objects that extend this abstract]]></description>
+        <long-description><![CDATA[]]></long-description>
+      </docblock>
+      <method final="false" abstract="true" static="false" visibility="public" namespace="Treffynnon\Navigator\Distance\Converter" line="23" package="">
+        <name>convert</name>
+        <type>function</type>
+        <docblock line="19">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="19" name="param" description="Value to be converted" type="float" variable="$distance">
+            <type by_reference="false">float</type>
+          </tag>
+          <tag line="19" name="param" description="Converted value" type="mixed" variable="">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="23">
+          <name>$distance</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="true" static="false" visibility="public" namespace="Treffynnon\Navigator\Distance\Converter" line="29" package="">
+        <name>reverse</name>
+        <type>function</type>
+        <docblock line="25">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="25" name="param" description="Value to be reverse converted" type="float" variable="$distance">
+            <type by_reference="false">float</type>
+          </tag>
+          <tag line="25" name="param" description="Reversed value" type="mixed" variable="">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="29">
+          <name>$distance</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Treffynnon\Navigator\Distance\Converter" line="36" package="">
+        <name>c</name>
+        <type>function</type>
+        <docblock line="31">
+          <description><![CDATA[Convert the distance]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="31" name="param" description="" type="float" variable="$distance">
+            <type by_reference="false">float</type>
+          </tag>
+          <tag line="31" name="return" description="" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+        <argument line="36">
+          <name>$distance</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Treffynnon\Navigator\Distance\Converter" line="45" package="">
+        <name>r</name>
+        <type>function</type>
+        <docblock line="40">
+          <description><![CDATA[Reverse the distance conversion]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="40" name="param" description="" type="float" variable="$distance">
+            <type by_reference="false">float</type>
+          </tag>
+          <tag line="40" name="return" description="" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+        <argument line="45">
+          <name>$distance</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="Treffynnon/Navigator/Distance/Calculator/Vincenty.php" hash="9d5f8c65e5cd3cc41bf4daf8842b6b50" package="Default">
+    <parse_markers>
+      <error line="22" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $point1 in calculate()</error>
+      <error line="22" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $point2 in calculate()</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file Treffynnon/Navigator/Distance/Calculator/Vincenty.php</error>
+    </parse_markers>
+    <namespace-alias name="N">Treffynnon\Navigator</namespace-alias>
+    <namespace-alias name="CB">Treffynnon\Navigator\CelestialBody</namespace-alias>
+    <class final="false" abstract="false" namespace="Treffynnon\Navigator\Distance\Calculator" line="20" package="Default">
+      <name>Vincenty</name>
+      <full_name>\Treffynnon\Navigator\Distance\Calculator\Vincenty</full_name>
+      <extends>\Treffynnon\Navigator\Distance\Calculator\CalculatorAbstract</extends>
+      <docblock line="16">
+        <description><![CDATA[Use the Vincenty formula to calculate the distance between
+two points]]></description>
+        <long-description><![CDATA[]]></long-description>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Treffynnon\Navigator\Distance\Calculator" line="34" package="">
+        <name>calculate</name>
+        <type>function</type>
+        <docblock line="22">
+          <description><![CDATA[Calculate the distance between two
+points using Vincenty's formula.]]></description>
+          <long-description><![CDATA[<p>Supply instances of the coordinate class.</p>
+
+<p>http://www.movable-type.co.uk/scripts/LatLongVincenty.html</p>]]></long-description>
+          <tag line="22" name="param" description="" type="\Treffynnon\Navigator\Coordinate" variable="$point1">
+            <type by_reference="false">\Treffynnon\Navigator\Coordinate</type>
+          </tag>
+          <tag line="22" name="param" description="" type="\Treffynnon\Navigator\Coordinate" variable="$point2">
+            <type by_reference="false">\Treffynnon\Navigator\Coordinate</type>
+          </tag>
+          <tag line="22" name="return" description="" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+        <argument line="34">
+          <name>$point1</name>
+          <default><![CDATA[]]></default>
+          <type>LatLong</type>
+        </argument>
+        <argument line="34">
+          <name>$point2</name>
+          <default><![CDATA[]]></default>
+          <type>LatLong</type>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="Treffynnon/Navigator/Distance/Calculator/GreatCircle.php" hash="11d28116f0cb8de3c9f42ea6d3349bbf" package="Default">
+    <parse_markers>
+      <error line="22" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $point1 in calculate()</error>
+      <error line="22" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $point2 in calculate()</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file Treffynnon/Navigator/Distance/Calculator/GreatCircle.php</error>
+    </parse_markers>
+    <namespace-alias name="N">Treffynnon\Navigator</namespace-alias>
+    <namespace-alias name="CB">Treffynnon\Navigator\CelestialBody</namespace-alias>
+    <class final="false" abstract="false" namespace="Treffynnon\Navigator\Distance\Calculator" line="20" package="Default">
+      <name>GreatCircle</name>
+      <full_name>\Treffynnon\Navigator\Distance\Calculator\GreatCircle</full_name>
+      <extends>\Treffynnon\Navigator\Distance\Calculator\CalculatorAbstract</extends>
+      <docblock line="16">
+        <description><![CDATA[Use the Great Circle formula to calculate the distance between
+two points]]></description>
+        <long-description><![CDATA[]]></long-description>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Treffynnon\Navigator\Distance\Calculator" line="34" package="">
+        <name>calculate</name>
+        <type>function</type>
+        <docblock line="22">
+          <description><![CDATA[Calculate the distance between two
+points using the Great Circle formula.]]></description>
+          <long-description><![CDATA[<p>Supply instances of the coordinate class.</p>
+
+<p>http://www.ga.gov.au/earth-monitoring/geodesy/geodetic-techniques/distance-calculation-algorithms.html#circle</p>]]></long-description>
+          <tag line="22" name="param" description="" type="\Treffynnon\Navigator\Coordinate" variable="$point1">
+            <type by_reference="false">\Treffynnon\Navigator\Coordinate</type>
+          </tag>
+          <tag line="22" name="param" description="" type="\Treffynnon\Navigator\Coordinate" variable="$point2">
+            <type by_reference="false">\Treffynnon\Navigator\Coordinate</type>
+          </tag>
+          <tag line="22" name="return" description="" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+        <argument line="34">
+          <name>$point1</name>
+          <default><![CDATA[]]></default>
+          <type>LatLong</type>
+        </argument>
+        <argument line="34">
+          <name>$point2</name>
+          <default><![CDATA[]]></default>
+          <type>LatLong</type>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="Treffynnon/Navigator/Distance/Calculator/CosineLaw.php" hash="66114a572876fc0251511955814ba10b" package="Default">
+    <parse_markers>
+      <error line="21" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $point1 in calculate()</error>
+      <error line="21" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $point2 in calculate()</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file Treffynnon/Navigator/Distance/Calculator/CosineLaw.php</error>
+    </parse_markers>
+    <namespace-alias name="N">Treffynnon\Navigator</namespace-alias>
+    <namespace-alias name="CB">Treffynnon\Navigator\CelestialBody</namespace-alias>
+    <class final="false" abstract="false" namespace="Treffynnon\Navigator\Distance\Calculator" line="19" package="Default">
+      <name>CosineLaw</name>
+      <full_name>\Treffynnon\Navigator\Distance\Calculator\CosineLaw</full_name>
+      <extends>\Treffynnon\Navigator\Distance\Calculator\CalculatorAbstract</extends>
+      <docblock line="16">
+        <description><![CDATA[Use the Cosine Law to calculate the distance between two points]]></description>
+        <long-description><![CDATA[]]></long-description>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Treffynnon\Navigator\Distance\Calculator" line="33" package="">
+        <name>calculate</name>
+        <type>function</type>
+        <docblock line="21">
+          <description><![CDATA[Calculate the distance between two
+points using Cosine Law.]]></description>
+          <long-description><![CDATA[<p>Supply instances of the coordinate class.</p>
+
+<p>http://en.wikipedia.org/wiki/Cosine_law</p>]]></long-description>
+          <tag line="21" name="param" description="" type="\Treffynnon\Navigator\Coordinate" variable="$point1">
+            <type by_reference="false">\Treffynnon\Navigator\Coordinate</type>
+          </tag>
+          <tag line="21" name="param" description="" type="\Treffynnon\Navigator\Coordinate" variable="$point2">
+            <type by_reference="false">\Treffynnon\Navigator\Coordinate</type>
+          </tag>
+          <tag line="21" name="return" description="" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+        <argument line="33">
+          <name>$point1</name>
+          <default><![CDATA[]]></default>
+          <type>LatLong</type>
+        </argument>
+        <argument line="33">
+          <name>$point2</name>
+          <default><![CDATA[]]></default>
+          <type>LatLong</type>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="Treffynnon/Navigator/Distance/Calculator/CalculatorAbstract.php" hash="05ab03c6b5f1383a676238f62283c218" package="Default">
+    <parse_markers>
+      <error line="22" code="50018">No DocBlock was found for property $celestialBody</error>
+      <error line="24" code="50015">Argument $point1 is missing from the Docblock of calculate()</error>
+      <error line="24" code="50015">Argument $point2 is missing from the Docblock of calculate()</error>
+      <error line="30" code="50010">No DocBlock was found for method __construct()</error>
+      <error line="37" code="50010">No DocBlock was found for method setCelestialBody()</error>
+      <error line="41" code="50010">No DocBlock was found for method getCelestialBody()</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file Treffynnon/Navigator/Distance/Calculator/CalculatorAbstract.php</error>
+    </parse_markers>
+    <namespace-alias name="N">Treffynnon\Navigator</namespace-alias>
+    <namespace-alias name="CB">Treffynnon\Navigator\CelestialBody</namespace-alias>
+    <class final="false" abstract="true" namespace="Treffynnon\Navigator\Distance\Calculator" line="20" package="Default">
+      <name>CalculatorAbstract</name>
+      <full_name>\Treffynnon\Navigator\Distance\Calculator\CalculatorAbstract</full_name>
+      <extends/>
+      <docblock line="16">
+        <description><![CDATA[A base set of methods to implement the setting of a celestial body
+for a calculator]]></description>
+        <long-description><![CDATA[]]></long-description>
+      </docblock>
+      <property final="false" static="false" visibility="public" line="22" package="Default">
+        <name>$celestialBody</name>
+        <default><![CDATA[null]]></default>
+      </property>
+      <method final="false" abstract="true" static="false" visibility="public" namespace="Treffynnon\Navigator\Distance\Calculator" line="28" package="">
+        <name>calculate</name>
+        <type>function</type>
+        <docblock line="24">
+          <description><![CDATA[Calculate the distance between two coordinates]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="24" name="return" description="Distance in metres" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+        <argument line="28">
+          <name>$point1</name>
+          <default><![CDATA[]]></default>
+          <type>LatLong</type>
+        </argument>
+        <argument line="28">
+          <name>$point2</name>
+          <default><![CDATA[]]></default>
+          <type>LatLong</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Treffynnon\Navigator\Distance\Calculator" line="30" package="">
+        <name>__construct</name>
+        <type>function</type>
+        <argument line="30">
+          <name>$body</name>
+          <default><![CDATA[null]]></default>
+          <type>CelestialBodyAbstract</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Treffynnon\Navigator\Distance\Calculator" line="37" package="">
+        <name>setCelestialBody</name>
+        <type>function</type>
+        <argument line="37">
+          <name>$body</name>
+          <default><![CDATA[]]></default>
+          <type>CelestialBodyAbstract</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Treffynnon\Navigator\Distance\Calculator" line="41" package="">
+        <name>getCelestialBody</name>
+        <type>function</type>
+      </method>
+    </class>
+  </file>
+  <file path="Treffynnon/Navigator/Distance/Calculator/Haversine.php" hash="e932e710c38f1fd973477d521db68630" package="Default">
+    <parse_markers>
+      <error line="22" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $point1 in calculate()</error>
+      <error line="22" code="50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $point2 in calculate()</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file Treffynnon/Navigator/Distance/Calculator/Haversine.php</error>
+    </parse_markers>
+    <namespace-alias name="N">Treffynnon\Navigator</namespace-alias>
+    <namespace-alias name="CB">Treffynnon\Navigator\CelestialBody</namespace-alias>
+    <class final="false" abstract="false" namespace="Treffynnon\Navigator\Distance\Calculator" line="20" package="Default">
+      <name>Haversine</name>
+      <full_name>\Treffynnon\Navigator\Distance\Calculator\Haversine</full_name>
+      <extends>\Treffynnon\Navigator\Distance\Calculator\CalculatorAbstract</extends>
+      <docblock line="16">
+        <description><![CDATA[Use the Haversine formula to calculate the distance between
+two points]]></description>
+        <long-description><![CDATA[]]></long-description>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Treffynnon\Navigator\Distance\Calculator" line="34" package="">
+        <name>calculate</name>
+        <type>function</type>
+        <docblock line="22">
+          <description><![CDATA[Calculate the distance between two
+points using the Haversine formula.]]></description>
+          <long-description><![CDATA[<p>Supply instances of the coordinate class.</p>
+
+<p>http://en.wikipedia.org/wiki/Haversine_formula</p>]]></long-description>
+          <tag line="22" name="param" description="" type="\Treffynnon\Navigator\Coordinate" variable="$point1">
+            <type by_reference="false">\Treffynnon\Navigator\Coordinate</type>
+          </tag>
+          <tag line="22" name="param" description="" type="\Treffynnon\Navigator\Coordinate" variable="$point2">
+            <type by_reference="false">\Treffynnon\Navigator\Coordinate</type>
+          </tag>
+          <tag line="22" name="return" description="" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+        <argument line="34">
+          <name>$point1</name>
+          <default><![CDATA[]]></default>
+          <type>LatLong</type>
+        </argument>
+        <argument line="34">
+          <name>$point2</name>
+          <default><![CDATA[]]></default>
+          <type>LatLong</type>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="Treffynnon/Navigator/CelestialBody/CelestialBodyAbstract.php" hash="d2d1da756a3ce8d61882f7de121a7b0c" package="Default">
+    <parse_markers>
+      <critical line="15" code="50019">No short description for property $equatorialRadius</critical>
+      <critical line="45" code="50019">No short description for property $volumetricMeanRadius</critical>
+      <error line="13" code="50000">No DocBlock was found for CelestialBodyAbstract</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file Treffynnon/Navigator/CelestialBody/CelestialBodyAbstract.php</error>
+    </parse_markers>
+    <class final="false" abstract="true" namespace="Treffynnon\Navigator\CelestialBody" line="13" package="Default">
+      <name>CelestialBodyAbstract</name>
+      <full_name>\Treffynnon\Navigator\CelestialBody\CelestialBodyAbstract</full_name>
+      <extends/>
+      <property final="false" static="false" visibility="public" line="18" package="Default">
+        <name>$equatorialRadius</name>
+        <default><![CDATA[]]></default>
+        <docblock line="15">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="15" name="var" description="in metres" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="28" package="Default">
+        <name>$polarRadius</name>
+        <default><![CDATA[]]></default>
+        <docblock line="20">
+          <description><![CDATA[This can be obtained from equatorial radius and flattening using the
+following formula:]]></description>
+          <long-description><![CDATA[<p>polarRadius = equatorialRadius * (1 - flattening)</p>]]></long-description>
+          <tag line="20" name="var" description="in metres" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="43" package="Default">
+        <name>$flattening</name>
+        <default><![CDATA[]]></default>
+        <docblock line="30">
+          <description><![CDATA[This can be obtained from inverse flattening by applying the following
+formula where f is inverse flattening:]]></description>
+          <long-description><![CDATA[<p>flattening = f/1</p>
+
+<p>If inverse flattening is unknown then flattening can be obtained with
+following formula:</p>
+
+<p>flattening = (equatorialRadius - polarRadius) / equatorialRadius</p>]]></long-description>
+          <tag line="30" name="var" description="" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="48" package="Default">
+        <name>$volumetricMeanRadius</name>
+        <default><![CDATA[]]></default>
+        <docblock line="45">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="45" name="var" description="in kilometres" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+      </property>
+    </class>
+  </file>
+  <file path="Treffynnon/Navigator/CelestialBody/Earth.php" hash="67551fdc712af816be20216aad24dee7" package="Default">
+    <parse_markers>
+      <critical line="19" code="50019">No short description for property $equatorialRadius</critical>
+      <critical line="24" code="50019">No short description for property $polarRadius</critical>
+      <critical line="29" code="50019">No short description for property $flattening</critical>
+      <critical line="34" code="50019">No short description for property $volumetricMeanRadius</critical>
+      <error line="1" code="50007">No page-level DocBlock was found in file Treffynnon/Navigator/CelestialBody/Earth.php</error>
+    </parse_markers>
+    <class final="false" abstract="false" namespace="Treffynnon\Navigator\CelestialBody" line="17" package="Default">
+      <name>Earth</name>
+      <full_name>\Treffynnon\Navigator\CelestialBody\Earth</full_name>
+      <extends>\Treffynnon\Navigator\CelestialBody\CelestialBodyAbstract</extends>
+      <docblock line="13">
+        <description><![CDATA[Set the Earth statistics for use in distance calculations]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="13" name="see" description="\Treffynnon\Navigator\CelestialBody\CelestialBodyAbstract" refers="\Treffynnon\Navigator\CelestialBody\CelestialBodyAbstract"/>
+      </docblock>
+      <property final="false" static="false" visibility="public" line="22" package="Default">
+        <name>$equatorialRadius</name>
+        <default><![CDATA[6378137.0]]></default>
+        <docblock line="19">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="19" name="var" description="in metres" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="27" package="Default">
+        <name>$polarRadius</name>
+        <default><![CDATA[6356752.31424518]]></default>
+        <docblock line="24">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="24" name="var" description="in metres" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="32" package="Default">
+        <name>$flattening</name>
+        <default><![CDATA[0.00335281066]]></default>
+        <docblock line="29">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="29" name="var" description="in metres" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="37" package="Default">
+        <name>$volumetricMeanRadius</name>
+        <default><![CDATA[6371]]></default>
+        <docblock line="34">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="34" name="var" description="in kilometres" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+      </property>
+    </class>
+  </file>
+  <file path="Treffynnon/Navigator/CelestialBody/EarthMoon.php" hash="bc7f9ea2d193cd1183f5d1abf70eb622" package="Default">
+    <parse_markers>
+      <critical line="19" code="50019">No short description for property $equatorialRadius</critical>
+      <critical line="24" code="50019">No short description for property $polarRadius</critical>
+      <critical line="29" code="50019">No short description for property $flattening</critical>
+      <critical line="34" code="50019">No short description for property $volumetricMeanRadius</critical>
+      <error line="1" code="50007">No page-level DocBlock was found in file Treffynnon/Navigator/CelestialBody/EarthMoon.php</error>
+    </parse_markers>
+    <class final="false" abstract="false" namespace="Treffynnon\Navigator\CelestialBody" line="17" package="Default">
+      <name>EarthMoon</name>
+      <full_name>\Treffynnon\Navigator\CelestialBody\EarthMoon</full_name>
+      <extends>\Treffynnon\Navigator\CelestialBody\CelestialBodyAbstract</extends>
+      <docblock line="13">
+        <description><![CDATA[Set the statistics of the Earth's Moon for use in distance calculations]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="13" name="see" description="\Treffynnon\Navigator\CelestialBody\CelestialBodyAbstract" refers="\Treffynnon\Navigator\CelestialBody\CelestialBodyAbstract"/>
+      </docblock>
+      <property final="false" static="false" visibility="public" line="22" package="Default">
+        <name>$equatorialRadius</name>
+        <default><![CDATA[1738100]]></default>
+        <docblock line="19">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="19" name="var" description="in metres" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="27" package="Default">
+        <name>$polarRadius</name>
+        <default><![CDATA[1736000]]></default>
+        <docblock line="24">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="24" name="var" description="in metres" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="32" package="Default">
+        <name>$flattening</name>
+        <default><![CDATA[0.00121]]></default>
+        <docblock line="29">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="29" name="var" description="in metres" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="37" package="Default">
+        <name>$volumetricMeanRadius</name>
+        <default><![CDATA[1737.1]]></default>
+        <docblock line="34">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="34" name="var" description="in kilometres" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+      </property>
+    </class>
+  </file>
+  <file path="Treffynnon/Navigator/CelestialBody/Mars.php" hash="8433c2c472f3a6b6270191e6f2c6c883" package="Default">
+    <parse_markers>
+      <critical line="19" code="50019">No short description for property $equatorialRadius</critical>
+      <critical line="24" code="50019">No short description for property $polarRadius</critical>
+      <critical line="29" code="50019">No short description for property $flattening</critical>
+      <critical line="34" code="50019">No short description for property $volumetricMeanRadius</critical>
+      <error line="1" code="50007">No page-level DocBlock was found in file Treffynnon/Navigator/CelestialBody/Mars.php</error>
+    </parse_markers>
+    <class final="false" abstract="false" namespace="Treffynnon\Navigator\CelestialBody" line="17" package="Default">
+      <name>Mars</name>
+      <full_name>\Treffynnon\Navigator\CelestialBody\Mars</full_name>
+      <extends>\Treffynnon\Navigator\CelestialBody\CelestialBodyAbstract</extends>
+      <docblock line="13">
+        <description><![CDATA[Set the Mars statistics for use in distance calculations]]></description>
+        <long-description><![CDATA[]]></long-description>
+        <tag line="13" name="see" description="\Treffynnon\Navigator\CelestialBody\CelestialBodyAbstract" refers="\Treffynnon\Navigator\CelestialBody\CelestialBodyAbstract"/>
+      </docblock>
+      <property final="false" static="false" visibility="public" line="22" package="Default">
+        <name>$equatorialRadius</name>
+        <default><![CDATA[3396200]]></default>
+        <docblock line="19">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="19" name="var" description="in metres" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="27" package="Default">
+        <name>$polarRadius</name>
+        <default><![CDATA[3376200]]></default>
+        <docblock line="24">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="24" name="var" description="in metres" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="32" package="Default">
+        <name>$flattening</name>
+        <default><![CDATA[0.00589]]></default>
+        <docblock line="29">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="29" name="var" description="in metres" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="public" line="37" package="Default">
+        <name>$volumetricMeanRadius</name>
+        <default><![CDATA[3389.5]]></default>
+        <docblock line="34">
+          <description><![CDATA[]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="34" name="var" description="in kilometres" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+      </property>
+    </class>
+  </file>
+  <file path="Treffynnon/Navigator/Coordinate/ParserAbstract.php" hash="5ffb7d5d993dfe8398b2e19d3c63a2be" package="Default">
+    <parse_markers>
+      <error line="78" code="50010">No DocBlock was found for method parse()</error>
+      <error line="80" code="50010">No DocBlock was found for method get()</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file Treffynnon/Navigator/Coordinate/ParserAbstract.php</error>
+    </parse_markers>
+    <namespace-alias name="N">Treffynnon\Navigator</namespace-alias>
+    <namespace-alias name="E">Treffynnon\Navigator\Exception</namespace-alias>
+    <class final="false" abstract="true" namespace="Treffynnon\Navigator\Coordinate" line="20" package="Default">
+      <name>ParserAbstract</name>
+      <full_name>\Treffynnon\Navigator\Coordinate\ParserAbstract</full_name>
+      <extends/>
+      <docblock line="16">
+        <description><![CDATA[A base set of methods to set a direction (N,S,E,W) and validate
+coordinates for classes that extend this abstract]]></description>
+        <long-description><![CDATA[]]></long-description>
+      </docblock>
+      <property final="false" static="false" visibility="protected" line="26" package="Default">
+        <name>$direction</name>
+        <default><![CDATA[null]]></default>
+        <docblock line="22">
+          <description><![CDATA[The direction stored as either Treffynnon\Navigator::Long or Treffynnon\Navigator::Lat]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="22" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Treffynnon\Navigator\Coordinate" line="32" package="">
+        <name>__construct</name>
+        <type>function</type>
+        <docblock line="28">
+          <description><![CDATA[Initialise parser. Pass in either Treffynnon\Navigator::Long or Treffynnon\Navigator::Lat]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="28" name="param" description="" type="string" variable="$direction">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="32">
+          <name>$direction</name>
+          <default><![CDATA[null]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Treffynnon\Navigator\Coordinate" line="42" package="">
+        <name>getDirection</name>
+        <type>function</type>
+        <docblock line="38">
+          <description><![CDATA[Get the direction string]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="38" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Treffynnon\Navigator\Coordinate" line="50" package="">
+        <name>setDirection</name>
+        <type>function</type>
+        <docblock line="46">
+          <description><![CDATA[Set the direction using Treffynnon\Navigator::Long or Treffynnon\Navigator::Lat]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="46" name="param" description="" type="string" variable="$direction">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="50">
+          <name>$direction</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Treffynnon\Navigator\Coordinate" line="66" package="">
+        <name>set</name>
+        <type>function</type>
+        <docblock line="59">
+          <description><![CDATA[Wrapper function around the parse method to allow for coordinate
+validation]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="59" name="param" description="" type="float|string" variable="$coord">
+            <type by_reference="false">float</type>
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="59" name="return" description="" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+          <tag line="59" name="throws" description="" type="\Exception">
+            <type by_reference="false">\Exception</type>
+          </tag>
+        </docblock>
+        <argument line="66">
+          <name>$coord</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="true" static="false" visibility="public" namespace="Treffynnon\Navigator\Coordinate" line="78" package="">
+        <name>parse</name>
+        <type>function</type>
+        <argument line="78">
+          <name>$coord</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="true" static="false" visibility="public" namespace="Treffynnon\Navigator\Coordinate" line="80" package="">
+        <name>get</name>
+        <type>function</type>
+        <argument line="80">
+          <name>$coord</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="Treffynnon/Navigator/Coordinate/DmsParser.php" hash="31191c01c4fcaf671be1eca031a49a4b" package="Default">
+    <parse_markers>
+      <error line="1" code="50007">No page-level DocBlock was found in file Treffynnon/Navigator/Coordinate/DmsParser.php</error>
+    </parse_markers>
+    <namespace-alias name="N">Treffynnon\Navigator</namespace-alias>
+    <namespace-alias name="E">Treffynnon\Navigator\Exception</namespace-alias>
+    <class final="false" abstract="false" namespace="Treffynnon\Navigator\Coordinate" line="19" package="Default">
+      <name>DmsParser</name>
+      <full_name>\Treffynnon\Navigator\Coordinate\DmsParser</full_name>
+      <extends>\Treffynnon\Navigator\Coordinate\ParserAbstract</extends>
+      <docblock line="16">
+        <description><![CDATA[Parse a Degrees, Minutes and Seconds notation coordinate to radians]]></description>
+        <long-description><![CDATA[]]></long-description>
+      </docblock>
+      <property final="false" static="false" visibility="protected" line="26" package="Default">
+        <name>$input_format</name>
+        <default><![CDATA['/(\d{1,3})°? (\d{1,2})\'? (\d{1,2}\.?\d*)"?([N,S,E,W])/u']]></default>
+        <docblock line="21">
+          <description><![CDATA[A regular expression to run on the DMS string to extract its component
+parts]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="21" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="32" package="Default">
+        <name>$output_format</name>
+        <default><![CDATA['%d %d %F%s']]></default>
+        <docblock line="28">
+          <description><![CDATA[The sprintf output format to use when printing the value]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="28" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Treffynnon\Navigator\Coordinate" line="41" package="">
+        <name>parse</name>
+        <type>function</type>
+        <docblock line="34">
+          <description><![CDATA[Used when setting a value in the Coordinate class.]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="34" name="example" description="parse('10° 5\' 30&quot;N');"/>
+          <tag line="34" name="example" description="parse('10 5 30N');"/>
+          <tag line="34" name="param" description="" type="string" variable="$coord">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="34" name="return" description="" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+        <argument line="41">
+          <name>$coord</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Treffynnon\Navigator\Coordinate" line="70" package="">
+        <name>get</name>
+        <type>function</type>
+        <docblock line="65">
+          <description><![CDATA[Get a string representation of the coordinate in DMS notation]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="65" name="param" description="" type="float" variable="$coord">
+            <type by_reference="false">float</type>
+          </tag>
+          <tag line="65" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="70">
+          <name>$coord</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="Treffynnon/Navigator/Coordinate/DecimalParser.php" hash="c448a0bfec0e9de2e01521cdd0b60fa4" package="Default">
+    <parse_markers>
+      <error line="1" code="50007">No page-level DocBlock was found in file Treffynnon/Navigator/Coordinate/DecimalParser.php</error>
+    </parse_markers>
+    <class final="false" abstract="false" namespace="Treffynnon\Navigator\Coordinate" line="16" package="Default">
+      <name>DecimalParser</name>
+      <full_name>\Treffynnon\Navigator\Coordinate\DecimalParser</full_name>
+      <extends>\Treffynnon\Navigator\Coordinate\ParserAbstract</extends>
+      <docblock line="13">
+        <description><![CDATA[Parse decimal coordinate values to radians]]></description>
+        <long-description><![CDATA[]]></long-description>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Treffynnon\Navigator\Coordinate" line="23" package="">
+        <name>parse</name>
+        <type>function</type>
+        <docblock line="18">
+          <description><![CDATA[Convert a decimal coordinate to radians]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="18" name="param" description="" type="float" variable="$coord">
+            <type by_reference="false">float</type>
+          </tag>
+          <tag line="18" name="return" description="" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+        <argument line="23">
+          <name>$coord</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Treffynnon\Navigator\Coordinate" line="32" package="">
+        <name>get</name>
+        <type>function</type>
+        <docblock line="27">
+          <description><![CDATA[Convert radians to a decimal coordinate]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="27" name="param" description="" type="float" variable="$coord">
+            <type by_reference="false">float</type>
+          </tag>
+          <tag line="27" name="return" description="" type="float">
+            <type by_reference="false">float</type>
+          </tag>
+        </docblock>
+        <argument line="32">
+          <name>$coord</name>
+          <default><![CDATA[]]></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="Treffynnon/Navigator/LatLong.php" hash="5c501a7bf98523fe0c677e19486d3b9c" package="Default">
+    <parse_markers>
+      <error line="1" code="50007">No page-level DocBlock was found in file Treffynnon/Navigator/LatLong.php</error>
+    </parse_markers>
+    <namespace-alias name="T">Treffynnon</namespace-alias>
+    <namespace-alias name="N">Treffynnon\Navigator</namespace-alias>
+    <class final="false" abstract="false" namespace="Treffynnon\Navigator" line="19" package="Default">
+      <name>LatLong</name>
+      <full_name>\Treffynnon\Navigator\LatLong</full_name>
+      <extends/>
+      <docblock line="16">
+        <description><![CDATA[A representation of a latitude and longitude coordinate]]></description>
+        <long-description><![CDATA[]]></long-description>
+      </docblock>
+      <property final="false" static="false" visibility="protected" line="25" package="Default">
+        <name>$latitude</name>
+        <default><![CDATA[null]]></default>
+        <docblock line="21">
+          <description><![CDATA[Latitude coordinate store]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="21" name="var" description="" type="\Treffynnon\Navigator\Coordinate">
+            <type by_reference="false">\Treffynnon\Navigator\Coordinate</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="31" package="Default">
+        <name>$longitude</name>
+        <default><![CDATA[null]]></default>
+        <docblock line="27">
+          <description><![CDATA[Longitude coordinate store]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="27" name="var" description="" type="\Treffynnon\Navigator\Coordinate">
+            <type by_reference="false">\Treffynnon\Navigator\Coordinate</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Treffynnon\Navigator" line="38" package="">
+        <name>__construct</name>
+        <type>function</type>
+        <docblock line="33">
+          <description><![CDATA[Setup a new LatLng instance by passing in the latitude and longitude]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="33" name="param" description="" type="\Treffynnon\Navigator\Coordinate" variable="$latitude">
+            <type by_reference="false">\Treffynnon\Navigator\Coordinate</type>
+          </tag>
+          <tag line="33" name="param" description="" type="\Treffynnon\Navigator\Coordinate" variable="$longitude">
+            <type by_reference="false">\Treffynnon\Navigator\Coordinate</type>
+          </tag>
+        </docblock>
+        <argument line="38">
+          <name>$latitude</name>
+          <default><![CDATA[]]></default>
+          <type>Coordinate</type>
+        </argument>
+        <argument line="38">
+          <name>$longitude</name>
+          <default><![CDATA[]]></default>
+          <type>Coordinate</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="Treffynnon\Navigator" line="48" package="">
+        <name>primeCoordinateParsers</name>
+        <type>function</type>
+        <docblock line="44">
+          <description><![CDATA[Prime the coordinate parser with any additional information
+necessary]]></description>
+          <long-description><![CDATA[]]></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Treffynnon\Navigator" line="57" package="">
+        <name>getLatitude</name>
+        <type>function</type>
+        <docblock line="53">
+          <description><![CDATA[Get the latitude coordinate object]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="53" name="return" description="" type="\Treffynnon\Navigator\Coordinate">
+            <type by_reference="false">\Treffynnon\Navigator\Coordinate</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="Treffynnon\Navigator" line="65" package="">
+        <name>getLongitude</name>
+        <type>function</type>
+        <docblock line="61">
+          <description><![CDATA[Get the longitude coordinate object]]></description>
+          <long-description><![CDATA[]]></long-description>
+          <tag line="61" name="return" description="" type="\Treffynnon\Navigator\Coordinate">
+            <type by_reference="false">\Treffynnon\Navigator\Coordinate</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+  </file>
+  <file path="Treffynnon/Navigator/Exception/InvalidCoordinateValueException.php" hash="e4eb65d76038d8d4a19f6000a8017db4" package="Default">
+    <parse_markers>
+      <error line="13" code="50000">No DocBlock was found for InvalidCoordinateValueException</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file Treffynnon/Navigator/Exception/InvalidCoordinateValueException.php</error>
+    </parse_markers>
+    <class final="false" abstract="false" namespace="Treffynnon\Navigator\Exception" line="13" package="Default">
+      <name>InvalidCoordinateValueException</name>
+      <full_name>\Treffynnon\Navigator\Exception\InvalidCoordinateValueException</full_name>
+      <extends>\Exception</extends>
+    </class>
+  </file>
+  <file path="Treffynnon/Navigator/Exception/InvalidCoordinateFormatException.php" hash="e8346e97e8e645438cdf861c24a58b34" package="Default">
+    <parse_markers>
+      <error line="13" code="50000">No DocBlock was found for InvalidCoordinateFormatException</error>
+      <error line="1" code="50007">No page-level DocBlock was found in file Treffynnon/Navigator/Exception/InvalidCoordinateFormatException.php</error>
+    </parse_markers>
+    <class final="false" abstract="false" namespace="Treffynnon\Navigator\Exception" line="13" package="Default">
+      <name>InvalidCoordinateFormatException</name>
+      <full_name>\Treffynnon\Navigator\Exception\InvalidCoordinateFormatException</full_name>
+      <extends>\Exception</extends>
+    </class>
+  </file>
+  <file path="Treffynnon/Navigator/Exception/InvalidDirectionException.php" hash="61e829941119ead770d02f5ef76b3eb5" package="Default">
+    <parse_markers>
+      <error line="1" code="50007">No page-level DocBlock was found in file Treffynnon/Navigator/Exception/InvalidDirectionException.php</error>
+    </parse_markers>
+    <class final="false" abstract="false" namespace="Treffynnon\Navigator\Exception" line="16" package="Default">
+      <name>InvalidDirectionException</name>
+      <full_name>\Treffynnon\Navigator\Exception\InvalidDirectionException</full_name>
+      <extends>\Exception</extends>
+      <docblock line="13">
+        <description><![CDATA[Triggered when an invalid direction is set]]></description>
+        <long-description><![CDATA[]]></long-description>
+      </docblock>
+    </class>
+  </file>
+  <package name="" full_name=""/>
+  <package name="Default" full_name="Default"/>
+  <namespace name="Treffynnon" full_name="Treffynnon">
+    <namespace name="Navigator" full_name="Treffynnon\Navigator">
+      <namespace name="CelestialBody" full_name="Treffynnon\Navigator\CelestialBody"/>
+      <namespace name="Coordinate" full_name="Treffynnon\Navigator\Coordinate"/>
+      <namespace name="Distance" full_name="Treffynnon\Navigator\Distance">
+        <namespace name="Calculator" full_name="Treffynnon\Navigator\Distance\Calculator"/>
+        <namespace name="Converter" full_name="Treffynnon\Navigator\Distance\Converter"/>
+      </namespace>
+      <namespace name="Exception" full_name="Treffynnon\Navigator\Exception"/>
+    </namespace>
+  </namespace>
+  <marker count="0">todo</marker>
+  <marker count="0">fixme</marker>
+  <deprecated count="0"/>
+</project>

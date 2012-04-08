@@ -1,0 +1,251 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Treffynnon\Navigator\Coordinate\DmsParser</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/Treffynnon.html"><i class="icon-th"></i> Treffynnon</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">84</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public inherited"><a href="#__construct" title="__construct :: Initialise parser. Pass in either Treffynnon\Navigator::Long or Treffynnon\Navigator::Lat"><span class="description">Initialise parser. Pass in either Treffynnon\Navigator::Long or Treffynnon\Navigator::Lat</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#get" title="get :: Get a string representation of the coordinate in DMS notation"><span class="description">Get a string representation of the coordinate in DMS notation</span><pre>get()</pre></a></li>
+<li class="method public inherited"><a href="#getDirection" title="getDirection :: Get the direction string"><span class="description">Get the direction string</span><pre>getDirection()</pre></a></li>
+<li class="method public "><a href="#parse" title="parse :: Used when setting a value in the Coordinate class."><span class="description">Used when setting a value in the Coordinate class.</span><pre>parse()</pre></a></li>
+<li class="method public inherited"><a href="#set" title="set :: Wrapper function around the parse method to allow for coordinate
+validation"><span class="description">Wrapper function around the parse method to allow for coordinate
+validation</span><pre>set()</pre></a></li>
+<li class="method public inherited"><a href="#setDirection" title="setDirection :: Set the direction using Treffynnon\Navigator::Long or Treffynnon\Navigator::Lat"><span class="description">Set the direction using Treffynnon\Navigator::Long or Treffynnon\Navigator::Lat</span><pre>setDirection()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="nav-header protected">» Protected</li>
+<li class="property protected inherited"><a href="#%24direction" title="$direction :: The direction stored as either Treffynnon\Navigator::Long or Treffynnon\Navigator::Lat"><span class="description">The direction stored as either Treffynnon\Navigator::Long or Treffynnon\Navigator::Lat</span><pre>$direction</pre></a></li>
+<li class="property protected "><a href="#%24input_format" title="$input_format :: A regular expression to run on the DMS string to extract its component
+parts"><span class="description">A regular expression to run on the DMS string to extract its component
+parts</span><pre>$input_format</pre></a></li>
+<li class="property protected "><a href="#%24output_format" title="$output_format :: The sprintf output format to use when printing the value"><span class="description">The sprintf output format to use when printing the value</span><pre>$output_format</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CTreffynnon%5CNavigator%5CCoordinate%5CDmsParser" id="\Treffynnon\Navigator\Coordinate\DmsParser"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/Treffynnon.html">Treffynnon</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Treffynnon.Navigator.html">Navigator</a></li>
+<span class="divider">\</span><li><a href="../namespaces/Treffynnon.Navigator.Coordinate.html">Coordinate</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/Treffynnon.Navigator.Coordinate.DmsParser.html">DmsParser</a>
+</li>
+</ul>
+<div href="../classes/Treffynnon.Navigator.Coordinate.DmsParser.html" class="element class">
+<p class="short_description">Parse a Degrees, Minutes and Seconds notation coordinate to radians</p>
+<div class="details">
+<p class="long_description"></p>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<h2>Initialise parser. Pass in either Treffynnon\Navigator::Long or Treffynnon\Navigator::Lat</h2>
+<pre>__construct(string $direction) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Treffynnon\Navigator\Coordinate\ParserAbstract::__construct()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$direction</h4>
+<code>string</code>
+</div>
+</div></div>
+</div>
+<a name="get" id="get"></a><div class="element clickable method public get" data-toggle="collapse" data-target=".get .collapse">
+<h2>Get a string representation of the coordinate in DMS notation</h2>
+<pre>get(float $coord) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$coord</h4>
+<code>float</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="getDirection" id="getDirection"></a><div class="element clickable method public getDirection" data-toggle="collapse" data-target=".getDirection .collapse">
+<h2>Get the direction string</h2>
+<pre>getDirection() : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Treffynnon\Navigator\Coordinate\ParserAbstract::getDirection()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="parse" id="parse"></a><div class="element clickable method public parse" data-toggle="collapse" data-target=".parse .collapse">
+<h2>Used when setting a value in the Coordinate class.</h2>
+<pre>parse(string $coord) : float</pre>
+<div class="labels"></div>
+<div class="row collapse">
+<div class="span4">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>example</th>
+<td>parse('10° 5\' 30"N');</td>
+</tr>
+<tr>
+<th>example</th>
+<td>parse('10 5 30N');</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$coord</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>float</code></div>
+</div>
+<div class="span4">
+<h3>Examples</h3>
+<pre class="prettyprint linenums"></pre>
+<pre class="prettyprint linenums"></pre>
+</div>
+</div>
+</div>
+<a name="set" id="set"></a><div class="element clickable method public set" data-toggle="collapse" data-target=".set .collapse">
+<h2>Wrapper function around the parse method to allow for coordinate
+validation</h2>
+<pre>set(float | string $coord) : float</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Treffynnon\Navigator\Coordinate\ParserAbstract::set()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$coord</h4>
+<code>floatstring</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="http://php.net/manual/en/class.exception.php">\Exception</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>float</code></div>
+</div></div>
+</div>
+<a name="setDirection" id="setDirection"></a><div class="element clickable method public setDirection" data-toggle="collapse" data-target=".setDirection .collapse">
+<h2>Set the direction using Treffynnon\Navigator::Long or Treffynnon\Navigator::Lat</h2>
+<pre>setDirection(string $direction) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Treffynnon\Navigator\Coordinate\ParserAbstract::setDirection()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$direction</h4>
+<code>string</code>
+</div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24direction" id="$direction"> </a><div class="element clickable property protected $direction" data-toggle="collapse" data-target=".$direction .collapse">
+<h2>The direction stored as either Treffynnon\Navigator::Long or Treffynnon\Navigator::Lat</h2>
+<pre>$direction : string</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Treffynnon\Navigator\Coordinate\ParserAbstract::$$direction</td>
+</tr></table>
+</div></div>
+</div>
+<a name="%24input_format" id="$input_format"> </a><div class="element clickable property protected $input_format" data-toggle="collapse" data-target=".$input_format .collapse">
+<h2>A regular expression to run on the DMS string to extract its component
+parts</h2>
+<pre>$input_format : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="%24output_format" id="$output_format"> </a><div class="element clickable property protected $output_format" data-toggle="collapse" data-target=".$output_format .collapse">
+<h2>The sprintf output format to use when printing the value</h2>
+<pre>$output_format : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a2</a> and<br>
+            generated on 2012-04-08T15:25:14+01:00.<br></footer></div>
+</div>
+</body>
+</html>
